@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="[join.do](http://join.do/)" method="post" name="frmMember">
+      <label>아이디</label>
+      <input type="text" name="userid" size="20" id="userid" autofocus /><br />
+      <label>비밀번호</label>
+      <input type="password" name="userpw" size="20" id="userpw" /><br />
+      <label>본문내용</label><br />
+      <textarea
+        style="resize: none"
+        name="opinion"
+        cols="20"
+        rows="5"
+      ></textarea
+      ><br />
+      <select name="city" id="city">
+        <option value="강북구">강북구</option>
+        <option value="강남구">강남구</option>
+        <option value="서초구">서초구</option>
+        <option value="중원구">중원구</option>
+        <option value="분당구">분당구</option>
+      </select>
+
+      <select name="city" id="city" multiple>
+        <option value="강북구">강북구</option>
+        <option value="강남구">강남구</option>
+        <option value="서초구">서초구</option>
+        <option value="중원구">중원구</option>
+        <option value="분당구">분당구</option>
+      </select>
+
+      <fieldset>
+        <legend>좋아하는 과일</legend>
+        <input type="checkbox" id="banana" name="banana" value="banana" />
+        <label for="banana">banana</label><br />
+        <input type="checkbox" id="apple" name="apple" value="apple" />
+        <label for="apple">apple</label><br />
+        <input type="checkbox" id="orange" name="orange" value="orange" />
+        <label for="orange">orange</label><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>개인성격</legend>
+        <input type="radio" id="fast" name="pers" value="fast" />
+        <label for="fast">fast</label><br />
+        <input type="radio" id="nomal" name="pers" value="nomal" />
+        <label for="nomal">nomal</label><br />
+        <input type="radio" id="slow" name="pers" value="slow" />
+        <label for="slow">slow</label><br />
+      </fieldset>
+
+      <input type="submit" value="확인" disabled />
+      <input type="reset" value="취소" />
+    </form>
+  </body>
+</html>
