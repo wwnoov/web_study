@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 요구명세서
+        // 3개의 값중 가운데 값 출력
+        function findMiddleValue(a, b, c) {
+        // 값을 배열에 저장
+        const values = [a, b, c];
+        // 배열을 정렬
+        values.sort(function (x, y) {
+        return x - y;
+        });
+        // 가운데 값을 출력
+        const middleValue = values[1];
+        console.log('가운데 값:', middleValue);
+        document.write('가운데 값: ', middleValue);
+        }
+        // 예제 값으로 함수 호출
+        findMiddleValue(1 , 7, 3);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 요구명세서
+// 10개의 값이 있다.
+// 최대값/최소값/중앙값/최대와최소를 제외한 합계 구하시오.
+// 랜덤 숫자를 담을 배열 생성
+let randomNumbers = [];
+
+// 10개의 랜덤 숫자 생성하여 배열에 추가
+for (let i = 0; i < 10; i++) {
+  let randomNumber = Math.floor(Math.random() * 101); // 0부터 100까지의 랜덤 숫자 생성
+  randomNumbers.push(randomNumber);
+}
+
+// 최대값 찾기
+let max = Math.max(...randomNumbers);
+
+// 최소값 찾기
+let min = Math.min(...randomNumbers);
+
+// 중앙값 찾기
+// 배열을 정렬한 후 중앙에 있는 값을 찾습니다.
+let sortedNumbers = randomNumbers.sort((a, b) => a - b); 
+let middleIndex = Math.floor(sortedNumbers.length / 2);
+let median = sortedNumbers[middleIndex];
+
+// 합계 계산
+let sum = randomNumbers.reduce((acc, num) => acc + num, 0);
+
+// 결과 출력
+
+console.log('최대값:', max);
+console.log('최소값:', min);
+console.log('중앙값:', median);
+console.log('최대최소를뺀 합:', sum-max-min);
+
+document.write('최대값:', max);
+document.write('<p>');
+document.write('<p>최소값:', min);
+document.write('<p>');
+document.write('중앙값:', median);
+document.write('<p>');
+document.write('최대최소를뺀 합:', sum-max-min);
+
+</script>
+    
+</body>
+</html>
