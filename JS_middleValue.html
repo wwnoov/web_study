@@ -9,21 +9,27 @@
     <script>
         // 요구명세서
         // 3개의 값중 가운데 값 출력
-        function findMiddleValue(a, b, c) {
-        // 값을 배열에 저장
-        const values = [a, b, c];
-        // 배열을 정렬
-        values.sort(function (x, y) {
-        return x - y;
-        });
-        // 가운데 값을 출력
-        const middleValue = values[1];
-        console.log('가운데 값:', middleValue);
-        document.write('가운데 값: ', middleValue);
+        function findMiddleNumber() {
+            // 사용자로부터 세 개의 숫자를 입력받음
+            var num1 = parseFloat(prompt("첫 번째 숫자를 입력하세요:"));
+            var num2 = parseFloat(prompt("두 번째 숫자를 입력하세요:"));
+            var num3 = parseFloat(prompt("세 번째 숫자를 입력하세요:"));
+
+            // 입력받은 숫자를 배열에 저장
+            var numbers = [num1, num2, num3];
+
+            // 배열을 정렬하여 중간에 있는 숫자를 찾음
+            numbers.sort(function(a, b) {
+                return a - b;
+            });
+
+            // 중간 숫자를 출력
+            console.log("가운데 숫자는 " + numbers[1] + "입니다.");
+            document.write("가운데 숫자는 " + numbers[1] + "입니다.");
         }
-        // 예제 값으로 함수 호출
-        findMiddleValue(1 , 7, 3);
-        
+
+        // 함수 호출
+        findMiddleNumber();
     </script>
 </body>
 </html>

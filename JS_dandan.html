@@ -10,12 +10,14 @@
         //구구단
         function printMultiplicationTable() {
         for (let i = 2; i <= 9; i++) {
+            console.log(`${i}단`);
             document.write(`<p>${i}단</p>`);
         for (let j = 1; j <= 9; j++) {
-document.write(`${i} * ${j} = ${i * j}<br>`);
-}
+            console.log(`${i} * ${j} = ${i * j}`);
+            document.write(`${i} * ${j} = ${i * j}<br>`);
+                }
+            }
         }
-    }
         // 실행
         printMultiplicationTable();
     </script>

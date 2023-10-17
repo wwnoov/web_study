@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>학점 구하기</title>
 </head>
 <body>
     <script>
@@ -23,9 +23,9 @@
         return 'Invalid Score';
         }
     }
-        // 사용 예시
-        var myScore = 85;
-        var myGrade = calculateGrade(myScore);
+        // 사용
+        let myScore = prompt("점수를 입력하세요");
+        let myGrade = calculateGrade(myScore);
         console.log('나의 학점은 ' + myGrade + '입니다.');
         document.write('나의 학점은 ' + myGrade + ' 입니다.');
     </script>
