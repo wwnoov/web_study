@@ -3,22 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>별삼각형2</title>
 </head>
 <body>
     <script>
         // 요구명세서
-        // 삼각형모양 별로 출력
-        function printTriangle(height){
-            for (let i = 1; i <= height; i++) {
-                let spaces = ' '.repeat(height - i);
-                let stars = '*'.repeat(2 * i - 1);
-                console.log(spaces + stars);
+        // 삼각형모양 별로 출력 + 역삼각형으로 수정   
+        function printTriangle(height){        
+            for(let i = 0; i < height; i++){
+            for(let j=0; j < i; j++)  {
+            document.write('&nbsp');
+            }
+            for(let j=height; j > i; j--)  {
+            // space
+            document.write('*');
+            }
+            for(let j=height-1; j > i; j--)  {
+            document.write('*');
+            }
+            document.write('<br>');
             }
         }
-        // 예제
-        let num =  prompt("높이를 입력하세요");
-        printTriangle(num);       
+        // 실행
+        let height =  prompt("몇층을 만들까요");
+        printTriangle(height);     
 
     </script>
 </body>

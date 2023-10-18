@@ -3,23 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>구구단2</title>
 </head>
 <body>
     <script>
-        //구구단
-        function printMultiplicationTable() {
-        for (let i = 2; i <= 9; i++) {
+        // 구구단 for문과 whlie 사용
+        // function gugudan() {
+        // for (let i = 2; i <= 9; i++) {
+        //     console.log(`${i}단`);
+        //     document.write(`<p>${i}단</p>`);
+        // for (let j = 1; j <= 9; j++) {
+        //     console.log(`${i} * ${j} = ${i * j}`);
+        //     document.write(`${i} * ${j} = ${i * j}<br>`);
+        //         }
+        //     }
+        // }
+        // // 실행
+        // gugudan();
+        // 구구단
+        function gugudan() {
+        let i = 2;
+        while (i <= 9) {
             console.log(`${i}단`);
             document.write(`<p>${i}단</p>`);
-        for (let j = 1; j <= 9; j++) {
+        let j = 1;
+        while (j <= 9) {
             console.log(`${i} * ${j} = ${i * j}`);
             document.write(`${i} * ${j} = ${i * j}<br>`);
-                }
+            j++;
             }
+            i++;
         }
+    }
         // 실행
-        printMultiplicationTable();
+        gugudan();
     </script>
 </body>
 </html>

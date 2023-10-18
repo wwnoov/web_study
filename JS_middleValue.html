@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>중간값 출력2</title>
 </head>
 <body>
     <script>
         // 요구명세서
-        // 3개의 값중 가운데 값 출력
+        // 5개의 값중 가운데 값 출력
         function findMiddleNumber() {
             // 사용자로부터 세 개의 숫자를 입력받음
-            var num1 = parseFloat(prompt("첫 번째 숫자를 입력하세요:"));
-            var num2 = parseFloat(prompt("두 번째 숫자를 입력하세요:"));
-            var num3 = parseFloat(prompt("세 번째 숫자를 입력하세요:"));
+            let num1 = parseFloat(prompt("첫 번째 숫자를 입력하세요:"));
+            let num2 = parseFloat(prompt("두 번째 숫자를 입력하세요:"));
+            let num3 = parseFloat(prompt("세 번째 숫자를 입력하세요:"));
+            let num4 = parseFloat(prompt("네 번째 숫자를 입력하세요:"));
+            let num5 = parseFloat(prompt("다섯 번째 숫자를 입력하세요:"));
+
+            //let num1 = 3;
+            //let num2 = 5;
+            //let num3 = 7;
 
             // 입력받은 숫자를 배열에 저장
-            var numbers = [num1, num2, num3];
+            let numbers = [num1, num2, num3,num4,num5];
 
             // 배열을 정렬하여 중간에 있는 숫자를 찾음
             numbers.sort(function(a, b) {
@@ -24,8 +30,12 @@
             });
 
             // 중간 숫자를 출력
-            console.log("가운데 숫자는 " + numbers[1] + "입니다.");
-            document.write("가운데 숫자는 " + numbers[1] + "입니다.");
+            console.log("첫번째 숫자는 " + numbers[0] + "입니다.");
+            console.log("두번째 숫자는 " + numbers[1] + "입니다.");
+            console.log("세번째 숫자는 " + numbers[2] + "입니다.");
+            console.log("네번째 숫자는 " + numbers[3] + "입니다.");            
+            console.log("다섯번째 숫자는 " + numbers[4] + "입니다.");     
+            document.write("가운데 숫자는 " + numbers[2] + "입니다."+'<p>');
         }
 
         // 함수 호출
