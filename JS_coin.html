@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>잔돈구하기</title>
+</head>
+<body>
+    <script>
+        // 요구명세서
+        // 잔돈을 구하는데 (3450)
+        // 1000원 x 몇개
+        // 100원 x 몇개
+        // 50원 x 몇개
+        // 10원 x 몇개
+        function calculateChange() {
+        // 사용자로부터 잔돈 입력 받기
+        let changeAmount = prompt("잔돈을 입력하세요 (숫자만 입력):");
+
+        // 입력값이 숫자가 아니면 다시 입력 요청
+        while (isNaN(changeAmount)) {
+            changeAmount = prompt("숫자를 입력하세요:");
+        }
+        // 입력값을 정수로 변환
+        changeAmount = parseInt(changeAmount);
+
+        // 각 동전의 갯수 계산
+        let num1000 = Math.floor(changeAmount / 1000);
+        let remainingAmount = changeAmount % 1000;
+
+        let num100 = Math.floor(remainingAmount / 100);
+        remainingAmount %= 100;
+
+        let num50 = Math.floor(remainingAmount / 50);
+        remainingAmount %= 50;
+        let num10 = Math.floor(remainingAmount / 10);
+
+        // 결과 출력
+        console.log(`1000원짜리: ${num1000}개`);
+        console.log(`100원짜리: ${num100}개`);
+        console.log(`50원짜리: ${num50}개`);
+        console.log(`10원짜리: ${num10}개`);
+        document.write(`1000원짜리: ${num1000}개`+'<p>');
+        document.write(`100원짜리: ${num100}개`+'<p>');
+        document.write(`50원짜리: ${num50}개`+'<p>');
+        document.write(`10원짜리: ${num10}개`);
+}       
+
+// 함수 실행
+calculateChange();
+    </script>
+    
+</body>
+</html>
