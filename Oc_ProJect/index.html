@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Final Project</title>
+  <!-- 외부 스타일 시트를 링크합니다. -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
 </head>
@@ -12,26 +13,31 @@
   <header>
     <div class="container">
       <h1>
+        <!-- 메인 페이지로 스크롤할 수 있는 버튼입니다. -->
         <button data-animation-scroll="true" data-target="#main">남원우</button>
       </h1>
       <nav>
         <ul>
           <li>
+            <!-- About 섹션으로 스크롤할 수 있는 버튼입니다. -->
             <button data-animation-scroll="true" data-target="#about">
               About
             </button>
           </li>
           <li>
+            <!-- Features 섹션으로 스크롤할 수 있는 버튼입니다. -->
             <button data-animation-scroll="true" data-target="#features">
               Features
             </button>
           </li>
-          <li>
+          <li> 
+            <!-- Portfolio 섹션으로 스크롤할 수 있는 버튼입니다. -->
             <button data-animation-scroll="true" data-target="#portfolio">
               Portfolio
             </button>
           </li>
           <li>
+              <!-- Contact 섹션으로 스크롤할 수 있는 버튼입니다. -->
             <button data-animation-scroll="true" data-target="#contact">
               Contact
             </button>
@@ -57,6 +63,7 @@
       </div>
       <div class="about-self">
         <div class="left">
+           <!-- 이미지를 표시합니다. -->
           <img src="images/me_alone.jpg" alt="">
         </div>
         <div class="right">
@@ -66,6 +73,7 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit praesentium doloremque quos quis est officiis.</p>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, omnis quibusdam.</p>
           <div class="social">
+             <!-- 소셜 미디어 프로필을 링크하는 아이콘들입니다. -->
             <a href="#">
               <i class="fa-brands fa-facebook"></i>
             </a>
@@ -89,7 +97,8 @@
         <h4>Features</h4>
         <h2>What I Do</h2>
       </div>
-      <div class="do-me">                
+      <div class="do-me">        
+         <!-- 다양한 기능을 표시하는 섹션입니다. -->        
         <div class="do-inner">
           <div class="icon">
             <i class="fa-brands fa-html5"></i>
@@ -121,6 +130,7 @@
     </div>  
   </section>
   <div class="bg"></div>
+    <!-- 포트폴리오 섹션 -->
   <section id="portfolio" class="portfolio">
     <div class="container">
       <div class="title">
@@ -128,11 +138,14 @@
         <h2>PortFolio</h2>
       </div>
       <div class="portfolio-me">
+      
+      <!-- 다양한 포트폴리오 항목을 표시하는 부분입니다. -->
         <div class="portfolio-inner">
           <img src="images/mock1.png" alt="">
           <strong>BRANDING</strong>
           <h3>Package Design</h3>
         </div>
+    
         <div class="portfolio-inner">
           <img src="images/mock2.png" alt="">
           <strong>DEVELOPMENT</strong>
@@ -161,6 +174,7 @@
       </div>
     </div>
   </section>
+  <!-- Contact 섹션 -->
   <section id="contact" class="contact">
     <div class="container">
       <div class="title">
@@ -217,6 +231,7 @@
       </div>
     </div>
   </section>
+  <!-- 외부 JavaScript 파일을 로드합니다. -->
   <script src="script.js"></script>
 </body>
 </html>
